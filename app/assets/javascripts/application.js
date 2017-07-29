@@ -12,7 +12,11 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require jquery_ujs
+//= require moment
 //= require react
 //= require react_ujs
+//= require react-datetime
 //= require components
 //= require_tree .
