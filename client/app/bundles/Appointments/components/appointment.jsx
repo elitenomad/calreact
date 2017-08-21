@@ -1,4 +1,7 @@
-const Appointment =  (props) => {
+import React from 'react';
+import moment from 'moment';
+
+export const Appointment =  (props) => {
     return(
         <div className="appointment">
             <h3>{props.appointment.title}</h3>
