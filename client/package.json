@@ -2,6 +2,10 @@
   "name": "calreact",
   "private": true,
   "scripts": {
+    "postinstall": "cd ./client && npm install",
+    "build:clean": "rm -r app/assets/webpack/* || true",
+    "build:dev:client": "(cd client && npm run build:dev:client --silent)",
+    "hot-assets": "(cd client && npm run hot-assets)",
     "build:test": "NODE_ENV=test webpack --config webpack.config.js",
     "build:production": "NODE_ENV=production webpack --config webpack.config.js",
     "build:development": "NODE_ENV=development webpack -w --config webpack.config.js"
@@ -21,6 +25,8 @@
     "imports-loader": "^0.7.1",
     "js-yaml": "^3.8.2",
     "react": "^15.5.4",
+    "jquery": "^3.1.1",
+    "jquery-ujs": "^1.2.2",
     "react-dom": "^15.5.4",
     "react-on-rails": "8.0.0",
     "immutability-helper": "2.1.1",
@@ -30,5 +36,9 @@
     "react-datetime": "2.8.3"
   },
   "devDependencies": {
+    "babel-plugin-react-transform": "^2.0.2",
+    "react-transform-hmr": "^1.0.4",
+    "webpack-dev-server": "^1.16.2"
   }
+
 }
